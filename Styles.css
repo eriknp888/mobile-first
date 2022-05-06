@@ -1,0 +1,1187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+/*FONT FAMILY & STYLES*/
+
+h1,h2,h3,h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-variant: all-small-caps;
+    color: white;
+}
+
+h5{
+    font-family: 'Roboto', sans-serif;
+    color: #1a2e39;
+}
+
+h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #45556f;
+}
+
+p {
+    font-family: 'Roboto Slab', serif;
+
+
+}
+
+a{
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    font-family: 'Roboto', sans-serif;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    color: #45556f;
+}
+
+h1{
+    font-size: 70px;
+}
+
+h2{
+    font-size: 50px;
+}
+
+h4, h5{
+    font-size: 30px;
+}
+
+/*FONT FAMILY & STYLES END*/
+
+
+/*burger menu*/
+@media screen and (max-width:768px) {
+
+  #computerheader {
+      display: none;
+  }
+  
+    .container {
+    
+      margin: auto;
+    }
+    nav{
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    
+    .navbar {
+      width: 100%;
+      box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.7);
+    background-color: #cedce5;
+  
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 62px;
+    }
+    
+    .navbar .menu-items {
+      display: flex;
+
+    }
+    
+    .navbar .nav-container li {
+      list-style: none;
+    }
+    
+    .navbar .nav-container a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 0.7rem;
+  
+    }
+    
+    .navbar .nav-container a:hover{
+        font-weight: bolder;
+    }
+    
+    .nav-container {
+      display: block;
+      position: relative;
+      height: 60px;
+
+    }
+    
+    .nav-container .checkbox {
+      position: absolute;
+      display: block;
+      height: 32px;
+      width: 32px;
+      top: 20px;
+      left: 20px;
+      z-index: 5;
+      opacity: 0;
+      cursor: pointer;
+    }
+    
+    .nav-container .hamburger-lines {
+      display: block;
+      height: 26px;
+      width: 32px;
+      position: absolute;
+      top: 17px;
+      left: 20px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+    }
+    
+    .nav-container .hamburger-lines .line {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: #45556f;
+
+    }
+    
+    .nav-container .hamburger-lines .line1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out;
+    }
+    
+    .nav-container .hamburger-lines .line2 {
+      transition: transform 0.2s ease-in-out;
+    }
+    
+    .nav-container .hamburger-lines .line3 {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+    
+    .navbar .menu-items {
+      padding-top: 120px;
+      background-image: url(img/stacked-waves-haikei.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+      transform: translate(-150%);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.5s ease-in-out;
+      text-align: center;
+      
+    }
+    
+    .navbar .menu-items li {
+      margin-bottom: 1.2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    /*logo*/
+
+    .logo {
+      position: absolute; right: 0; 
+      max-width: 100%;
+      height: 60px;
+      padding-right: 10PX;
+   
+    }   
+    /*LOGO END*/
+    
+    .nav-container input[type="checkbox"]:checked ~ .menu-items {
+      transform: translateX(0);
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+      transform: rotate(45deg);
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+      transform: scaleY(0);
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+      transform: rotate(-45deg);
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .logo{
+      display: none;
+    }
+  }
+    
+    /*burger menu END*/
+
+
+/*HEADER START*/
+/*computer*/
+
+@media screen and (min-width:768px) {
+#burger {
+display: none;
+}
+
+    header{
+    position: sticky;
+    top: 0;
+    background-color: #cedce5;
+    box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.7);
+    width: 100%;
+    z-index: 1;
+    }
+    
+    /*Logo*/
+   header > nav > a > #logo{
+    position: absolute; left: 0%; 
+    position: absolute; top: 20%; 
+        height: 100%;
+        width: auto;
+        padding-left: 10px;
+        padding-bottom: 20px;
+
+
+    }
+
+    header>nav{
+    display:flex;
+    justify-content: right;
+    align-items:center; 
+    
+    height: 70px;  
+      
+    }
+    
+    header>nav>a{
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color:#45556f;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: 200px;
+        align-items: space-around;
+        
+        box-sizing: border-box;
+        border: 2px solid #cedce500;
+        border-radius: 15px 16px;
+          
+    }
+
+    /*crazy knap effekt*/
+        .btn-one {
+    
+          transition: all 0.3s;
+          position: relative;
+        }
+        .btn-one span {
+          transition: all 0.3s;
+        }
+        .btn-one::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          opacity: 0;
+          transition: all 0.3s;
+          border-top-width: 3px;
+          border-bottom-width: 3px;
+          border-top-style: solid;
+          border-bottom-style: solid;
+          transform: scale(0.1, 1);
+        }
+        .btn-one:hover span {
+          letter-spacing: 2px;
+        }
+        .btn-one:hover::before {
+          opacity: 1; 
+          transform: scale(1, 1); 
+        }
+        .btn-one::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          transition: all 0.3s;
+        }
+        .btn-one:hover::after {
+          opacity: 0; 
+          transform: scale(0.1, 1);
+        }
+}
+    /*----------------HEADER END-------------------*/
+
+    /*----------------------Forside-------------------------*/
+/*HERO*/
+.hero-image{
+  background-image: url(img/hero.png);
+  height: 500px;
+  
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.hero-text {
+   
+  padding-top: 100px;
+  top: 50%;
+  left: 50%;
+  margin-right: 25px;
+  color: white;
+}
+.hero-text>div{
+    
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 50%;
+}
+.hero-text>h1{
+  font-size: 40pt;
+}
+.hero-text>p{
+  color:white;
+  font-family: 'Roboto', sans-serif
+}
+
+.hero-text>a{
+    
+  background-color:  #cedce5;
+  color: #45556f;
+  text-decoration: none;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px; 
+
+  box-sizing: border-box;
+  border-radius: 15px 16px;
+  border: 2px solid #cedce5;
+  
+  font-weight: bold;
+  font-size: 15pt;
+
+}
+
+.hero-text>a:hover{
+  background-color: #ecf7fc;
+  transition: all 0.5s;
+}
+
+/*HERO END*/
+
+  /*UDVALG START*/
+
+  #udvalg-overskrift{
+    background-color: #b8cad6;
+    padding-top: 100px;
+    padding-left: 5%;
+  }
+  
+  .udvalg{
+   
+    background-color: #b8cad6;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-bottom: 100px;
+   
+    
+  }
+ 
+
+
+  .fadein img{
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+ 
+  height: 400px;
+  width: 400px;
+
+  
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 1s ease;
+    
+}
+
+.fadein img:hover{
+filter: grayscale(0%);
+filter: gray;
+-webkit-filter: grayscale(0%);
+filter: none;
+transition: 1s ease;
+
+}
+@media screen and (max-width:768px){
+  .fadein img{
+    transition: 1s ease;
+      max-width: 300px;
+      max-height: 300px;
+      border-radius: 50%;
+     
+  }
+  .udvalg{
+    flex-direction: column;
+  }
+  #youtube{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+   
+  }
+ 
+}
+
+@media screen and (min-width:768px){
+  .fadein img {
+    transition: 1s ease;
+    border-radius: 50%;
+
+    margin-top: 75px;
+  margin-left: 10px;
+  margin-right: 10px;
+ 
+  height: 400px;
+  width: 400px;
+    }
+
+
+}
+
+/*YOUTUBE - START - YOUTUBE - START - YOUTUBE - START - YOUTUBE*/
+
+#youtube-overskrift{
+  background-color:#a6c4d1;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#youtube{
+  background-color: #a6c4d1;
+  
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 100px;
+}
+#youtube>div{
+  margin-bottom: 50px;
+}
+
+/*YOUTUBE - END - YOUTUBE - END - YOUTUBE - END - YOUTUBE - END*/
+
+
+
+/*SECTION--TILBUD--SECTION--TILBUD--SECTION--TILBUD*/
+
+#tilbud-hero{
+  background-image: url(img/tilbud.png);
+ 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+
+  height: 500px;
+}
+.tilbud-hero-text{
+  text-align: center;
+  
+  padding-top: 200px;
+}
+
+#tilbud{
+  background-color:#b8cad6;
+  
+  display: flex;
+
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+#ugetilbud-overskrift{
+  background-color:#b8cad6;
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+.ugetilbud{
+  text-align: center;
+
+}
+/*SECTION-END-TILBUD-END-SECTION-END-TILBUD-END-SECTION-END-TILBUD*/
+
+
+
+
+
+
+/*NYE TILBUD - START - NYE TILBUD - START - NYE TILBUD - START*/
+#nyetilbud-overskrift{
+  text-align: center;
+  background-color:#a5bac9a8;
+  padding-top: 50px;
+ 
+  
+}
+
+#nye-tilbud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  justify-content: space-evenly; 
+  height: 600px;
+  background-color: #a5bac9a8;
+  text-align: center;
+  padding-bottom: 50px;
+
+}
+  
+  .circle img:hover {
+  border-radius:50%;
+  transition: 1s ease;
+  }
+  @media screen and (max-width:768px){
+    .circle img {
+      transition: 1s ease;
+      max-width: 350px;
+      max-height: 350px;
+      border-radius: 15%;
+      } 
+
+    #nye-tilbud{
+      height: 800px;
+    }
+  }
+  @media screen and (min-width:768px){
+    .circle img {
+      transition: 1s ease;
+      max-width: 500px;
+      max-height: 500px;
+      border-radius: 20%;
+      }
+  }
+
+
+/*NYE TILBUD - END - NYE TILBUD - END - NYE TILBUD - END*/
+
+
+
+/**************PRØVE*********************************/
+.bølge{
+  width: 150px;
+}
+
+
+
+/**********************PRØVE**************************/
+
+
+
+
+/*TOO GOOD TO GO - START - TOO GOOD TO GO - START - TOO GOOD TO GO*/
+
+#to-go-overskrift{
+  background-color: #b8cad6;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#to-go{
+  background-color: #b8cad6;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  align-items: center;
+  text-align: center;
+
+
+
+}
+
+    
+.to-go-flex>h2{
+  font-style: italic;
+  font-weight: 300;
+  padding-top: 30px;
+}
+
+
+
+
+/* TOO GOOD TO GO - END - TOO GOOD TO GO - END TOO GOOD TO GO*/
+
+/*COMPUTER REGLER*/
+
+@media screen and (min-width:768px){
+  #tilbud{
+    flex-direction: row;
+  }
+  .ugetilbud{
+    /*text-align: center;*/
+    max-width: 25%; 
+  }
+  #nye-tilbud{
+    flex-direction: row;
+  }
+  .nye-tilbud-flex{
+    max-width: 50%;
+  }
+  .to-go-flex{
+    max-width: 50%;
+  }
+
+}
+
+/*MOBIL REGLER*/
+
+@media screen and (max-width:768px){
+  #tilbud{
+    flex-direction: column;
+   
+  }
+  .ugetilbud{
+ 
+    /*text-align: center;*/
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  #nye-tilbud{
+    flex-direction: column;
+  }
+  .nye-tilbud-flex{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  #to-go{
+    flex-direction: column;
+  }
+
+}
+    /*---------------------Forside END-----------------------*/
+    /*---------------------Shop-----------------------------*/
+
+    /*shophero*/
+#shop-hero {
+    background-image: linear-gradient(0deg, #00000088 80%, #ffffff44 100%), url(img/vin.jpg);
+  
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    
+    background-position: 0px -70px; 
+
+    height: 500px;
+        
+}
+.shop-hero-tekst {
+    text-align: center;
+    padding-top: 200px;
+    
+    color: white;
+    
+
+}    
+
+/*shop section*/
+.shopsection{
+    background-color: #f7f3f0;
+    padding-bottom: 3%;
+    
+ 
+}
+
+/* shop katagori h1 */
+.shopsection > h1 {
+    padding-top: 3%;
+    color: #45556f;
+    font-size: 2em;
+    text-align: center;
+
+}
+
+/* shop hr under katagori*/
+.shopsection > hr {
+    border-top: #45556f 1px solid;
+    width: 11rem;
+    margin-left: 2%;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+/*shop wrapper for nav og kort*/
+.shop-wrapper{  
+    display:flex;
+
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+/* check box shop */
+/*computer*/
+@media screen and (min-width:768px){
+  .container-shop {
+    display: flex;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 20%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1em;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+   
+  }
+  
+  
+  .container-shop input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(216, 224, 230);
+    border-radius: 5px;
+  }
+  
+
+  .container-shop:hover input ~ .checkmark {
+    background-color: #45556f;
+  }
+  
+
+  .container-shop input:checked ~ .checkmark {
+    background-color: #45556f;
+  }
+  
+ 
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+
+  .container-shop input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+
+  .container-shop .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+/*mobil*/
+@media screen and (max-width:768px){
+
+.container-shop {
+display: flex;
+position: relative;
+padding-left: 30px;
+
+margin-top: 30%;
+margin-left: 20px;
+
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.container-shop input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+
+}
+
+
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 25px;
+background-color: rgb(216, 224, 230);
+border-radius: 5px;
+}
+
+
+.container-shop:hover input ~ .checkmark {
+background-color: #45556f;
+}
+
+
+.container-shop input:checked ~ .checkmark {
+background-color: #45556f;
+}
+
+
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+
+.container-shop input:checked ~ .checkmark:after {
+display: block;
+}
+
+
+.container-shop .checkmark:after {
+left: 9px;
+top: 5px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 3px 3px 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+ 
+}
+/* check box shop END */
+
+
+/* shop kort */
+/*skud ud til vin for at give mig kreativiteten til at løse det her*/
+/*computer*/ 
+@media screen and (min-width:768px){
+.shop-kort {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    grid-auto-rows: minmax(100px, auto);
+    padding-left: 15rem;
+    padding-top: 2%;
+    padding-bottom: 10%;
+
+}
+.shop-kort>div>h6 {
+    font-size: 1rem;    
+     color: #1a2e39;
+     padding-bottom: 1em;
+}
+
+.shop-kort > div > h5 {
+    font-size: 1.5rem;
+}
+
+.shop-kort > div > img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+}
+}
+/*mobil*/
+@media screen and (max-width:768px){
+  .shop-kort {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    grid-auto-rows: minmax(100px, auto);
+    padding-left: 5rem;
+    padding-top: 2%;
+    padding-bottom: 10%;
+
+}
+
+.shop-kort>div>h6 {
+    font-size: 1rem;    
+     padding-bottom: 0.5em;
+}
+
+.shop-kort > div > h5 {
+    font-size: 1rem;
+}
+
+
+.shop-kort > div > img {
+    max-width: 100px;
+    max-height: 100px;  
+    border-radius: 10px;
+}
+}
+    
+.grow img {
+    transition: 1s ease;
+    }
+    
+.grow:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+    }
+    /*-----------------SHOP END--------------------------*/
+
+    /*--------------------OM OS--------------------*/
+  /*om os side*/
+.omos{
+  background-color: #b8cad6;
+
+}
+
+/*billedleft computer*/
+@media screen and (min-width:768px){
+.billederleft{
+    width: 350px;
+    height: 450px;
+    float: left;
+    margin-left: 5%;
+    padding-top: 50px;
+
+
+
+  }}
+  /*Mobil*/
+@media screen and (max-width:768px){
+.billederleft{
+        width: 350px;
+    height: 400px;
+    margin-left: 3%;
+    margin-right: auto; 
+      padding-top: 20px;
+    
+      
+    }}
+
+
+/*tekst venstre computer*/
+@media screen and (min-width:768px){
+.tekst{
+      flex-direction:row;
+      font-size:larger;
+      text-align:start;
+      margin-left: 15%;
+      margin-right: 15%;
+      line-height: 35px;
+      padding-top: 50px;
+      padding-left: 250px;
+      color: #1a2e39;
+    }}  
+    /*mobil*/
+ @media screen and (max-width:768px){
+.tekst{
+      flex-direction:row;
+      font-size:larger;
+      text-align:start;
+      margin-left: 5%;
+      margin-right: 5%;
+      line-height: 35px;
+      padding-top: 50px;
+      padding-left:10px;
+      color: #1a2e39;
+    }}
+
+
+
+/*billedright computer*/
+@media screen and (min-width:768px){
+.billederright{
+    width: 350px;
+    height: 400px;
+    float: right;
+    margin-right: 5%;
+    padding-top: 50px;
+    
+  }}
+/*mobil*/
+  @media screen and (max-width:768px){
+.billederright{
+      width: 350px;
+      height: 400px;
+      padding-top: 20px;
+       margin-left: 3%;
+    margin-right: auto; 
+      
+    }}
+
+
+
+    /*tekst2 højre*/
+@media screen and (min-width:768px){
+.tekst2{
+    flex-direction:row;
+    font-size:larger;
+    text-align:start;
+    margin-left: 15%;
+    margin-right: 15%;
+    line-height: 35px;
+    padding-top: 150px;
+    padding-right: 250px;
+    color: #1a2e39;
+ 
+}}
+/*mobil*/
+@media screen and (max-width:768px){
+.tekst2{
+    flex-direction:row;
+    font-size:larger;
+    text-align:start;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 35px;
+    padding-top: 50px;
+    padding-left:10px;
+    
+}}
+
+/*Bottom billede*/
+.bottombillede{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 10px;
+    height:100%;
+    width:100%;
+    padding-top: 50px;  
+    object-fit: contain;
+    border-bottom: #1a2e39 3px solid;
+}
+
+/*top billede*/
+
+#omos-hero {
+  background-image: linear-gradient(0deg, #00000088 80%, #ffffff44 100%), url(img/butik.jpg);
+
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  
+  background-position: 0px -70px; 
+
+  height: 500px;
+      
+}
+.omos-hero-tekst {
+  text-align: center;
+  padding-top: 200px;
+  color: white;
+}    
+
+    /*--------------------OM OS END----------------*/
+
+ /*----------------------FOOTER START---------------*/
+
+ /*mobil*/
+@media screen and (max-width:768px) {
+    footer {
+    background-image: url(img/stacked-waves-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    text-align: center;
+    
+    margin-bottom: 0;    
+}
+}
+
+/*computer*/
+
+@media screen and (min-width:768px) {
+    footer {
+        background-image: url(img/stacked-waves-haikei.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        text-align: center;
+        
+        margin-bottom: 0;
+    }
+    }
+
+
+footer > div{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+footer > div > h2 {
+    color: white;
+}
+
+footer > div > p {
+    color: white;
+}
+
+footer > div > h2 {
+    font-size: 25pt;
+
+
+}
+footer>div>p{
+    font-size: 15pt;
+}
+
+#footerlogo{
+    height: 200px;
+}
+
+/*FOOTER END*/
